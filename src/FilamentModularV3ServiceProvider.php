@@ -119,7 +119,7 @@ class FilamentModularV3ServiceProvider extends PackageServiceProvider
 
                 foreach ($modules as $module) {
                     $baseNamespace = "Modules\\{$module->getStudlyName()}\\Filament\\{$panelId}";
-                    $resourcesDir = "{$module->getPath()}/Filament/{$panelId}/Resources";
+                    $resourcesDir = "{$module->getPath()}/app/Filament/{$panelId}/Resources";
 
                     $resourcesList = array_merge($resourcesList, $discoverResourcesFromDirectory($resourcesDir, $baseNamespace . '\\Resources'));
                 }
